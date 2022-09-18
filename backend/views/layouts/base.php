@@ -29,22 +29,9 @@ AppAsset::register($this);
 
     <div class="wrap h-100 d-flex flex-column">
         <?php echo $this->render(view: '_header') ?>
-
-        <main role="main" class="d-flex">
-            <?php echo $this->render(view: '_sidebar') ?>
-
-            <div class="content-wrapper p-3">
-                <?= Breadcrumbs::widget([
-                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                ]) ?>
-                <?= Alert::widget() ?>
-                <?= $content ?>
-            </div>
-        </main>
-
+        
+        <?php echo $content ?>
     </div>
-
-
 
     <?php $this->endBody() ?>
 </body>
